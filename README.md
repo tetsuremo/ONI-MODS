@@ -7,11 +7,9 @@
 
 \## 使用的字体
 
-\\[乡立方黑体](https://www.maoken.com/freefonts/20979.html)
+\\[WD-XL 滑油字](https://github.com/NightFurySL2001/WD-XL-font)
 
 \\[抖音美好体](https://github.com/bytedance/fonts)
-
-\\[思源黑体](https://github.com/adobe-fonts/source-han-sans)  //当启用补全字体时使用，与官方的字源一致
 
 
 
@@ -37,4 +35,5 @@
 Unity 2022.3.62f1
 Visual Studio 2022
 字体打包 = Unity 2018.2.21f1 + TMP 1.2.4
+
 
