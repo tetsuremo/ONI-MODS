@@ -21,7 +21,13 @@
 	</Target>
 
 	<ItemGroup>
+	  <Compile Remove="ModLocalizationPatch.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="scr\Loader.cs~RF5f73da.TMP" />
+	  <None Remove="scr\Patcher.cs~RF7c1254.TMP" />
+	  <None Remove="scr\PoFileReader.cs~RF135fdf8.TMP" />
 	</ItemGroup>
 
 	<ItemGroup>

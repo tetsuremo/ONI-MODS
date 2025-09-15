@@ -1,12 +1,7 @@
 {
-  // Title 字体（游戏里大标题、菜单标题等）
-  // ⚠️如果写 null，则保持原字体，不替换
   "Title": "mytitlefont",
-
-  // Head 字体（界面里的一些小标题、标签等）
   "Head": "myheaderfont",
-
-  // Description 字体（正文、说明文字等）
-  // ⚠️如果需要补全字符，则去对应路径下替换完整版本的fonts.bundle，把null改为"mybodyfont"
-  "Description": null
+  "Description": null,
+  "DebugMode": false,
+  "EnableTranslationFix": true
 }
