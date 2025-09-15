@@ -9,7 +9,7 @@
 
 \\[WD-XL 滑油字](https://github.com/NightFurySL2001/WD-XL-font)
 
-\\[金字社得正体](https://github.com/bytedance/fonts](https://www.typeface.cn/shop/product/jinzishedezheng)
+\\[金字社得正体](https://www.typeface.cn/shop/product/jinzishedezheng)
 
 
 
@@ -35,6 +35,7 @@
 Unity 2022.3.62f1  
 Visual Studio 2022  
 字体打包 = Unity 2018.2.21f1 + TMP 1.2.4
+
 
 
 
