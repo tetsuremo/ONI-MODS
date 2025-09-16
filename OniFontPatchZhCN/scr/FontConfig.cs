@@ -7,8 +7,7 @@ namespace TetsuRemo.OniFontPatchZhCN
     {
         public string Title { get; set; }
         public string Head { get; set; }
-        public string Description { get; set; }
-        public bool DescriptionReplace { get; set; }
+        public string Description { get; set; } 
         public bool Debug { get; set; } = false;
         public bool EnableTranslationFix { get; set; } = true;
 
@@ -25,9 +24,30 @@ namespace TetsuRemo.OniFontPatchZhCN
             catch { }
 
             if (config == null)
-                config = new FontConfig { Title = "", Head = "", Description = "", DescriptionReplace = false, Debug = false };
+            {
+                config = new FontConfig
+                {
+                    Title = null,
+                    Head = null,
+                    Description = null,
+                    Debug = false,
+                    EnableTranslationFix = true
+                };
+            }
 
-            UnityEngine.Debug.Log($"[OniFontPatchZhCN] FontConfig loaded: Title={config.Title}, Head={config.Head}, Description={config.Description}, DescriptionReplace={config.DescriptionReplace}, Debug={config.Debug}");
+            // 清理空字符串或 "null" → null
+            if (string.IsNullOrWhiteSpace(config.Title) || config.Title == "null")
+                config.Title = null;
+            if (string.IsNullOrWhiteSpace(config.Head) || config.Head == "null")
+                config.Head = null;
+            if (string.IsNullOrWhiteSpace(config.Description) || config.Description == "null")
+                config.Description = null;
+
+            UnityEngine.Debug.Log($"[OniFontPatchZhCN] FontConfig loaded: " +
+                $"Title={config.Title ?? "default"}, " +
+                $"Head={config.Head ?? "default"}, " +
+                $"Description={config.Description ?? "default"}, " +
+                $"Debug={config.Debug}");
 
             return config;
         }

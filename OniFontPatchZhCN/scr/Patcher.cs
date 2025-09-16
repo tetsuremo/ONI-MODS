@@ -69,7 +69,8 @@ namespace TetsuRemo.OniFontPatchZhCN
         // 根据原字体名选择替换字体
         private static TMP_FontAsset SelectFont(string fontname)
         {
-            if (string.IsNullOrEmpty(fontname)) return null;
+            if (string.IsNullOrEmpty(fontname))
+                return Fonts.Description;
 
             if (fontname.StartsWith("GRAYSTROKE") || fontname == Fonts.Title?.name)
                 return Fonts.Title;
@@ -77,9 +78,9 @@ namespace TetsuRemo.OniFontPatchZhCN
             if (fontname.StartsWith("Economica") || fontname == Fonts.Head?.name)
                 return Fonts.Head;
 
-            // 只有 DescriptionReplace 为 true 才替换 Description
-            return Fonts.DescriptionReplace ? Fonts.Description : null;
+            return Fonts.Description; // 兜底正文
         }
+
 
         // 日志辅助方法
         private static void Log(string message)

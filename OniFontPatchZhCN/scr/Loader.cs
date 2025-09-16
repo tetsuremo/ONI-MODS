@@ -16,10 +16,9 @@ namespace TetsuRemo.OniFontPatchZhCN
             Patcher.Fonts = CustomFontAssets.Load(rootPath, config);
             Patcher.DebugMode = config.Debug;
 
-            Debug.Log($"[OniFontPatchZhCN] FontConfig loaded:\n- Title={config.Title}\n- Head={config.Head}\n- Description={config.Description}\n- DescriptionReplace={config.DescriptionReplace}\n- Debug={config.Debug}\n- EnableTranslationFix={config.EnableTranslationFix}");
+            Debug.Log($"[OniFontPatchZhCN] FontConfig loaded:\n- Title={config.Title}\n- Head={config.Head}\n- Debug={config.Debug}\n- EnableTranslationFix={config.EnableTranslationFix}");
 
-            Debug.Log($"[OniFontPatchZhCN] Loaded fonts: Title={Patcher.Fonts?.Title?.name}, Head={Patcher.Fonts?.Head?.name}, Desc={Patcher.Fonts?.Description?.name}, DescReplace={Patcher.Fonts?.DescriptionReplace}");
-
+            Debug.Log($"[OniFontPatchZhCN] Loaded fonts: Title={Patcher.Fonts?.Title?.name}, Head={Patcher.Fonts?.Head?.name}, Description={Patcher.Fonts?.Description?.name}");
             // --- 翻译修复 ---
             if (config.EnableTranslationFix && IsCurrentLanguageChinese())
             {

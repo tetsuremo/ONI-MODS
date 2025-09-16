@@ -1,5 +1,4 @@
-﻿// CustomFontAssets.cs
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -11,14 +10,12 @@ namespace TetsuRemo.OniFontPatchZhCN
         public TMP_FontAsset Title { get; private set; }
         public TMP_FontAsset Head { get; private set; }
         public TMP_FontAsset Description { get; private set; }
-        public bool DescriptionReplace { get; private set; }
 
-        public CustomFontAssets(TMP_FontAsset title, TMP_FontAsset head, TMP_FontAsset desc, bool descReplace)
+        public CustomFontAssets(TMP_FontAsset title, TMP_FontAsset head, TMP_FontAsset description)
         {
             Title = title;
             Head = head;
-            Description = desc;
-            DescriptionReplace = descReplace;
+            Description = description;
         }
 
         public static CustomFontAssets Load(string rootPath, FontConfig config)
@@ -32,11 +29,12 @@ namespace TetsuRemo.OniFontPatchZhCN
 
             TMP_FontAsset LoadFont(string name)
             {
-                if (string.IsNullOrEmpty(name) || name == "null")
+                if (string.IsNullOrEmpty(name))
                     return null;
                 return fonts.FirstOrDefault(f => f.name == name);
             }
 
+            // 默认字体：兜底使用中文 NotoSans
             var defaultFont = Resources.FindObjectsOfTypeAll<TMP_FontAsset>()
                 .FirstOrDefault(f => f.name == "NotoSansCJKsc-Regular");
 
@@ -44,11 +42,12 @@ namespace TetsuRemo.OniFontPatchZhCN
             TMP_FontAsset headFont = LoadFont(config.Head) ?? defaultFont;
             TMP_FontAsset descFont = LoadFont(config.Description) ?? defaultFont;
 
-            // 只有当Description不为null且config.DescriptionReplace为true时才真正替换描述字体
-            bool descReplace = config.DescriptionReplace && descFont != null;
+            UnityEngine.Debug.Log($"[OniFontPatchZhCN] Loaded fonts: " +
+                $"Title={titleFont?.name}, " +
+                $"Head={headFont?.name}, " +
+                $"Description={descFont?.name}");
 
-            UnityEngine.Debug.Log($"[OniFontPatchZhCN] Loaded fonts: Title={titleFont?.name}, Head={headFont?.name}, Desc={descFont?.name}, DescReplace={descReplace}");
-            return new CustomFontAssets(titleFont, headFont, descFont, descReplace);
+            return new CustomFontAssets(titleFont, headFont, descFont);
         }
     }
 }
