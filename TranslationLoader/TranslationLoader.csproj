@@ -1,0 +1,118 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Copyright>Copyright (c) 2024 TetsuRemo</Copyright>
+		<TargetFramework>net4.8</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<RootNamespace>TranslationLoader</RootNamespace>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<Configuration>Release</Configuration>
+	</PropertyGroup>
+
+	<Target Name="Deploy" AfterTargets="Build">
+		<ItemGroup>
+			<ArtifactFile Include="./bin/$(Configuration)/$(MSBuildProjectName).dll" />
+			<ResourceFiles Include="../resources/**/*.*" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(ArtifactFile);@(ResourceFiles)" DestinationFolder="$(LocalDestinationPath)/$(MSBuildProjectName)/%(RecursiveDir)" />
+	</Target>
+
+	<ItemGroup>
+	  <None Remove="esbxzoby.c2k~" />
+	  <None Remove="Register\ar.po" />
+	  <None Remove="Register\he.po" />
+	  <None Remove="Register\ja.po" />
+	  <None Remove="Register\ko.po" />
+	  <None Remove="Register\ru.po" />
+	  <None Remove="Register\th.po" />
+	  <None Remove="Register\zh.po" />
+	  <None Remove="Source\2xogtw15.xo2~" />
+	  <None Remove="Source\xllahnkv.2lq~" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Register\ar.po" />
+	  <EmbeddedResource Include="Register\he.po" />
+	  <EmbeddedResource Include="Register\ja.po" />
+	  <EmbeddedResource Include="Register\ko.po" />
+	  <EmbeddedResource Include="Register\ru.po" />
+	  <EmbeddedResource Include="Register\th.po" />
+	  <EmbeddedResource Include="Register\zh.po" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="mscorlib" />
+		<Reference Include="PLibActions">
+		  <HintPath>libs\PLibActions.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibAVC">
+		  <HintPath>libs\PLibAVC.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibBuildings">
+		  <HintPath>libs\PLibBuildings.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibCore">
+		  <HintPath>libs\PLibCore.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibDatabase">
+		  <HintPath>libs\PLibDatabase.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibLighting">
+		  <HintPath>libs\PLibLighting.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibOptions">
+		  <HintPath>libs\PLibOptions.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibUI">
+		  <HintPath>libs\PLibUI.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Runtime" />
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Data" />
+		<Reference Include="System.Xml" />
+
+		<!-- Unity 游戏 DLL -->
+		<Reference Include="0Harmony">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Xml.Serialization" />
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UI.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+</Project>
