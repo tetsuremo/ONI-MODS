@@ -64,36 +64,32 @@ namespace BuildableNaturalTileFix
             GeneratedBuildings.MakeBuildingAlwaysOperational(go);
             BuildingConfigManager.Instance.IgnoreDefaultKComponent(typeof(RequiresFoundation), prefab_tag);
 
+            // === 保持与原版地砖一致 ===
+            var occupier = go.AddOrGet<SimCellOccupier>();
+            occupier.doReplaceElement = true;
+            occupier.strengthMultiplier = 1.5f;
+            occupier.movementSpeedMultiplier = DUPLICANTSTATS.MOVEMENT_MODIFIERS.BONUS_2;
+            occupier.notifyOnMelt = true;
+
             go.AddOrGet<TileTemperature>();
             go.AddOrGet<KAnimGridTileVisualizer>().blockTileConnectorID = TileConfig.BlockTileConnectorID;
             go.AddOrGet<BuildingHP>().destroyOnDamaged = true;
         }
 
-        public override void DoPostConfigurePreview(BuildingDef def, GameObject go)
-        {
-            go.AddOrGet<SimCellOccupier>().doReplaceElement = true;
-        }
-
         public override void DoPostConfigureUnderConstruction(GameObject go)
         {
-            go.AddOrGet<SimCellOccupier>().doReplaceElement = true;
+            base.DoPostConfigureUnderConstruction(go);
+            go.AddOrGet<KAnimGridTileVisualizer>();
         }
 
         public override void DoPostConfigureComplete(GameObject go)
         {
-            var kpid = go.GetComponent<KPrefabID>();
-            if (kpid != null)
-                kpid.AddTag(GameTags.FloorTiles, false);
+            GeneratedBuildings.RemoveLoopingSounds(go);
+            go.GetComponent<KPrefabID>().AddTag(GameTags.FloorTiles, false);
 
             var primary = go.AddOrGet<PrimaryElement>();
-            primary.SetElement(SimHashes.Dirt); // 默认元素，实际建造时会使用选择的材料
+            primary.SetElement(SimHashes.Dirt); // 默认元素，实际建造时会替换
             primary.Mass = ConfigOptions.Instance.BlockMass;
-
-            var occupier = go.AddOrGet<SimCellOccupier>();
-            occupier.doReplaceElement = true;
-            occupier.notifyOnMelt = true;
-
-            go.AddOrGet<BuildingComplete>();
         }
     }
 }
