@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BNTFix v1.0.0\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: n\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.7\n"
+
+msgctxt "STRINGS.BUILDINGS.PREFABS.BUILDABLENATURALTILEFIX_NATURALTILE.NAME"
+msgid "Natural Tile"
+msgstr ""
+
+msgctxt "STRINGS.BUILDINGS.PREFABS.BUILDABLENATURALTILEFIX_NATURALTILE.DESC"
+msgid "Fill that hole you dug out back in with any solid element."
+msgstr ""
+
+msgctxt "STRINGS.BUILDINGS.PREFABS.BUILDABLENATURALTILEFIX_NATURALTILE.EFFECT"
+msgid "Creates a natural tile from the selected material."
+msgstr ""
+
+msgctxt "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.GENERAL"
+msgid "General Settings"
+msgstr ""
+
+msgctxt "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.BUILDMASS.NAME"
+msgid "Build Mass"
+msgstr ""
+
+msgctxt "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.BUILDMASS.DESC"
+msgid "Mass required to build the natural tile."
+msgstr ""
+
+msgctxt "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.BLOCKMASS.NAME"
+msgid "Block Mass"
+msgstr ""
+
+msgctxt "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.BLOCKMASS.DESC"
+msgid "Mass of the resulting natural tile."
+msgstr ""
+
+msgctxt "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.BUILDSPEED.NAME"
+msgid "Build Speed"
+msgstr ""
+
+msgctxt "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.BUILDSPEED.DESC"
+msgid "Construction time for the natural tile."
+msgstr ""

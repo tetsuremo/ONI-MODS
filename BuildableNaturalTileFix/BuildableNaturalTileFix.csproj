@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net471</TargetFramework>
+		<AssemblyTitle>BuildableNaturalTileFix</AssemblyTitle>
+		<ProductVersion>1.0.0.0</ProductVersion>
+		<RootNamespace>BuildableNaturalTileFix</RootNamespace>
+		<LangVersion>10.0</LangVersion>
+		<FileAlignment>512</FileAlignment>
+		<Deterministic>true</Deterministic>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<OutputPath>bin</OutputPath>
+		<Platforms>AnyCPU;x64</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="translations\*.po" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Remove="translations\zh.po" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="0Harmony">
+			<HintPath>..\..\..\libs\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>..\..\..\libs\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>..\..\..\libs\Assembly-CSharp-firstpass.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibActions">
+			<HintPath>..\..\..\libs\PLibActions.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibAVC">
+			<HintPath>..\..\..\libs\PLibAVC.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibBuildings">
+			<HintPath>..\..\..\libs\PLibBuildings.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibCore">
+			<HintPath>..\..\..\libs\PLibCore.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibDatabase">
+			<HintPath>..\..\..\libs\PLibDatabase.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibLighting">
+			<HintPath>..\..\..\libs\PLibLighting.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibOptions">
+			<HintPath>..\..\..\libs\PLibOptions.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibUI">
+			<HintPath>..\..\..\libs\PLibUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>..\..\..\libs\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>..\..\..\libs\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>..\..\..\libs\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>..\..\..\libs\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>..\..\..\libs\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>
