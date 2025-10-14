@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WaterGateKai 1.0\n"
+"POT-Creation-Date: 2025-10-13 00:00+0000\n"
+"Language: \n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# =====================
+# == Building Strings ==
+# =====================
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.NAME"
+msgid "2-Tile Water Gate"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.DESC"
+msgid "The most commonly used Liquid Locks!"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.EFFECT"
+msgid "Igneous Rock → Brine + Water\nGranite → Ethanol + Concentrated Brine\nOther Materials → Crude Oil + Petroleum"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X3.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X3.NAME"
+msgid "3-Tile Water Gate"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X3.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X3.DESC"
+msgid "3-Tile versions of liquid locks."
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X3.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X3.EFFECT"
+msgid "From top to bottom: Water, Petroleum, Crude Oil."
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X4.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X4.NAME"
+msgid "4-Tile Water Gate"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X4.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X4.DESC"
+msgid "4-Tile versions of liquid locks."
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X4.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X4.EFFECT"
+msgid "From top to bottom: Water, Brine, Ethanol, Crude Oil."
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIGELGATE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIGELGATE.NAME"
+msgid "Gel Gate"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIGELGATE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIGELGATE.DESC"
+msgid "Why does Oil become ViscoGel?"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.PIAPIGELGATE.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIGELGATE.EFFECT"
+msgid "Produces 101 kg of gel upon activation."
+msgstr ""
+
+# =====================
+# == Config Options ==
+# =====================
+
+#. STRINGS.CONFIG.GENERAL
+msgctxt "WaterGateKai.STRINGS.CONFIG.GENERAL"
+msgid "General Settings"
+msgstr ""
+
+#. STRINGS.CONFIG.BUILDSPEED.NAME
+msgctxt "WaterGateKai.STRINGS.CONFIG.BUILDSPEED.NAME"
+msgid "Build Time"
+msgstr ""
+
+#. STRINGS.CONFIG.BUILDSPEED.DESC
+msgctxt "WaterGateKai.STRINGS.CONFIG.BUILDSPEED.DESC"
+msgid "Base construction time (seconds). Lower = faster."
+msgstr ""
+
+#. STRINGS.CONFIG.BOTTOMLIQUIDMASS.NAME
+msgctxt "WaterGateKai.STRINGS.CONFIG.BOTTOMLIQUIDMASS.NAME"
+msgid "Bottom Liquid Mass (kg)"
+msgstr ""
+
+#. STRINGS.CONFIG.BOTTOMLIQUIDMASS.DESC
+msgctxt "WaterGateKai.STRINGS.CONFIG.BOTTOMLIQUIDMASS.DESC"
+msgid "The mass of the generated bottom liquid (default 0.111 kg)"
+msgstr ""
