@@ -6,13 +6,21 @@ Central translation manager that loads .po files from <game>/config/TranslationL
 
 ## Features
 📝 Generate .po template: Creates a simple template for the current game language (header + one example).
+
 🌐 Automatic language detection: Loads <lang>.po automatically based on the game's selected language.
+
 📂 Organized storage: Saves .po files in <game>/config/TranslationLoader/ (two levels up from the DLL). Folder is auto-created if missing.
+
 ⚙️ Settings integration: Adds a settings button (via PLib.Options if present) to open the current .po or regenerate the template.
+
 🏁 Last-write-wins translation: Injects your translations after all other mods have loaded, ensuring they override if necessary.
+
 🔍 Duplicate prevention: Detects if another translation manager has run and avoids re-injection.
+
 📊 Detailed logs: Outputs load statistics, errors, and applied translations.
+
 ⏱️ Performance: With ~60 mods loaded, startup takes about 1 minute.
+
 
 
 ## Where to place .po
