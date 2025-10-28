@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\batchmodifyskins\\script\\strings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|solutionrelative:script\\strings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\batchmodifyskins\\script\\batchskintemplatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|solutionrelative:script\\batchskintemplatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\batchmodifyskins\\script\\assets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|solutionrelative:script\\assets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "STRINGS.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\STRINGS.cs",
+              "RelativeDocumentMoniker": "Script\\STRINGS.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\STRINGS.cs",
+              "RelativeToolTip": "Script\\STRINGS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T07:10:37.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BatchSkinTemplateManager.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\BatchSkinTemplateManager.cs",
+              "RelativeDocumentMoniker": "Script\\BatchSkinTemplateManager.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\BatchSkinTemplateManager.cs",
+              "RelativeToolTip": "Script\\BatchSkinTemplateManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:36:36.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Assets.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\Assets.cs",
+              "RelativeDocumentMoniker": "Script\\Assets.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\Assets.cs",
+              "RelativeToolTip": "Script\\Assets.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:21:40.964Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<AssemblyTitle>Batch Apply Styles</AssemblyTitle>
+		<FileVersion>25.10.20</FileVersion>
+		<AssemblyVersion>25.10.20</AssemblyVersion>
+		<RootNamespace>BatchModifyStyles</RootNamespace>
+		<LangVersion>10.0</LangVersion>
+		<Description>Batch modify blueprints (skins) of Buildings and Dupes</Description>
+		<TargetFramework>net48</TargetFramework>
+
+		<!-- 输出路径 -->
+		<OutputPath>$(SolutionDir)bin\</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
+
+		<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>false</GenerateBindingRedirectsOutputType>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<!-- NuGet 包 -->
+		<PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.44" />
+
+		<!-- 引用 DLL -->
+		<Reference Include="0Harmony">
+			<HintPath>..\..\..\libs\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>..\..\..\libs\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>..\..\..\libs\Assembly-CSharp-firstpass.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibCore">
+			<HintPath>..\..\..\libs\PLibCore.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibDatabase">
+			<HintPath>..\..\..\libs\PLibDatabase.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibAVC">
+			<HintPath>..\..\..\libs\PLibAVC.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibActions">
+			<HintPath>..\..\..\libs\PLibActions.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibBuildings">
+			<HintPath>..\..\..\libs\PLibBuildings.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibLighting">
+			<HintPath>..\..\..\libs\PLibLighting.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibOptions">
+			<HintPath>..\..\..\libs\PLibOptions.dll</HintPath>
+		</Reference>
+		<Reference Include="PLibUI">
+			<HintPath>..\..\..\libs\PLibUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>..\..\..\libs\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>..\..\..\libs\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>..\..\..\libs\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+		  <HintPath>..\..\..\libs\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+		  <HintPath>..\..\..\libs\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+		  <HintPath>..\..\..\libs\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+		  <HintPath>..\..\..\libs\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>..\..\..\libs\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>..\..\..\libs\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<!-- ILRepack 合并目标 --><!--
+	<Target Name="MergeAssemblies" AfterTargets="Build">
+		<PropertyGroup>
+			<ILRepackOutputPath>$(TargetPath)</ILRepackOutputPath>
+			<LibsPath>..\..\..\libs</LibsPath>
+			<NuGetPackagesPath>$(UserProfile)\.nuget\packages</NuGetPackagesPath>
+		</PropertyGroup>
+
+		<ItemGroup>
+			<AssembliesToMerge Include="$(TargetPath)" />
+			<AssembliesToMerge Include="$(LibsPath)\PLibCore.dll" />
+			<AssembliesToMerge Include="$(LibsPath)\PLibActions.dll" />
+		</ItemGroup>
+
+		<Message Text="开始使用 ILRepack 合并程序集..." Importance="high" />
+
+		<ILRepack OutputFile="$(ILRepackOutputPath)" InputAssemblies="@(AssembliesToMerge)" TargetKind="Dll" LibraryPath="$(LibsPath);$(NuGetPackagesPath)" />
+
+		<Message Text="ILRepack 合并完成! 输出文件: $(ILRepackOutputPath)" Importance="high" />
+	</Target>-->
+
+</Project>

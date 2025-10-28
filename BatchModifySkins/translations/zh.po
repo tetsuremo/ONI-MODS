@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+"X-Generator: Poedit 3.8\n"
+
+# STRINGS.UI.BATCH_MODIFY_SKINS.BATCH_MODIFY_SKIN
+msgctxt "STRINGS.UI.BATCH_MODIFY_SKINS.BATCH_MODIFY_SKIN"
+msgid "Batch Apply Blueprint"
+msgstr "批量应用外观"
+
+# STRINGS.UI.BATCH_MODIFY_SKINS.BATCH_SKIN_TOOLTIP
+msgctxt "STRINGS.UI.BATCH_MODIFY_SKINS.BATCH_SKIN_TOOLTIP"
+msgid "Apply this blueprint style to multiple targets at once (Drag to select area)"
+msgstr "一次性将此外观蓝图应用到多个目标（拖动选择区域）"
+
+# STRINGS.UI.BATCH_MODIFY_SKINS.APPLIED_TO_TARGETS
+msgctxt "STRINGS.UI.BATCH_MODIFY_SKINS.APPLIED_TO_TARGETS"
+msgid "Applied blueprint to {0} targets"
+msgstr "已将外观蓝图应用到 {0} 个目标"
