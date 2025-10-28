@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+"Language: zh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. SafeFoodTooltip.STRINGS.FOOD.CALORIES
+msgctxt "SafeFoodTooltip.STRINGS.FOOD.CALORIES"
+msgid "Calories: {0} kcal"
+msgstr "热量：{0} kcal"
+
+#. SafeFoodTooltip.STRINGS.FOOD.CALORIES_TOOLTIP
+msgctxt "SafeFoodTooltip.STRINGS.FOOD.CALORIES_TOOLTIP"
+msgid "Energy provided per unit of this food."
+msgstr "每单位食物提供的热量。"
+
+#. SafeFoodTooltip.STRINGS.FOOD.QUALITY
+msgctxt "SafeFoodTooltip.STRINGS.FOOD.QUALITY"
+msgid "Quality: {0}"
+msgstr "品质：{0}"
+
+#. SafeFoodTooltip.STRINGS.FOOD.QUALITY_TOOLTIP
+msgctxt "SafeFoodTooltip.STRINGS.FOOD.QUALITY_TOOLTIP"
+msgid "Indicates the food quality rating."
+msgstr "食物的品质等级。"
+
+#. SafeFoodTooltip.STRINGS.FOOD.FRESHNESS
+msgctxt "SafeFoodTooltip.STRINGS.FOOD.FRESHNESS"
+msgid "Freshness: {0}%"
+msgstr "新鲜度：{0}%"
+
+#. SafeFoodTooltip.STRINGS.FOOD.FRESHNESS_TOOLTIP
+msgctxt "SafeFoodTooltip.STRINGS.FOOD.FRESHNESS_TOOLTIP"
+msgid "How fresh this food currently is."
+msgstr "当前食物的新鲜程度。"

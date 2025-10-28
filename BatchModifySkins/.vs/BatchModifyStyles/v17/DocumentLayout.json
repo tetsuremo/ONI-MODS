@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\batchmodifyskins\\script\\batchskininputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|solutionrelative:script\\batchskininputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\batchmodifyskins\\script\\strings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|BatchModifyStyles.csproj|solutionrelative:script\\strings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BatchSkinInputHandler.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\BatchSkinInputHandler.cs",
+              "RelativeDocumentMoniker": "Script\\BatchSkinInputHandler.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\BatchSkinInputHandler.cs",
+              "RelativeToolTip": "Script\\BatchSkinInputHandler.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:40:57.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "STRINGS.cs",
               "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\STRINGS.cs",
               "RelativeDocumentMoniker": "Script\\STRINGS.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BatchSkinTemplateManager.cs",
               "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\BatchSkinTemplateManager.cs",
               "RelativeDocumentMoniker": "Script\\BatchSkinTemplateManager.cs",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "Script\\BatchSkinTemplateManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcBAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T06:36:36.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T06:36:36.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Assets.cs",
               "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\BatchModifySkins\\Script\\Assets.cs",
               "RelativeDocumentMoniker": "Script\\Assets.cs",
@@ -64,8 +80,7 @@
               "RelativeToolTip": "Script\\Assets.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAqwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T06:21:40.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T06:21:40.964Z"
             }
           ]
         }

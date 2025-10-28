@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+  <folder id="0">
+    <file id="0" name="place_0" width="160" height="152" pivot_x="0.5007032" pivot_y="-0.05953944" />
+    <file id="1" name="ui_0" width="126" height="122" pivot_x="0.4992064" pivot_y="0.1079918" />
+  </folder>
+  <entity id="0" name="piapi_gelgate">
+    <animation id="0" name="ui" length="120">
+      <mainline>
+        <key id="0" time="0">
+          <object_ref id="0" timeline="0" key="0" z_index="1" />
+        </key>
+        <key id="1" time="30">
+          <object_ref id="0" timeline="0" key="1" z_index="1" />
+        </key>
+        <key id="2" time="60">
+          <object_ref id="0" timeline="0" key="2" z_index="1" />
+        </key>
+        <key id="3" time="90">
+          <object_ref id="0" timeline="0" key="3" z_index="1" />
+        </key>
+      </mainline>
+      <timeline id="0" name="ui_0">
+        <key id="0" time="0" spin="1">
+          <object folder="0" file="1" x="2" y="6" angle="0" scale_x="1" scale_y="1" />
+        </key>
+        <key id="1" time="30" spin="1">
+          <object folder="0" file="1" x="2" y="6" angle="0" scale_x="1" scale_y="1" />
+        </key>
+        <key id="2" time="60" spin="1">
+          <object folder="0" file="1" x="2" y="6" angle="0" scale_x="1" scale_y="1" />
+        </key>
+        <key id="3" time="90" spin="1">
+          <object folder="0" file="1" x="2" y="6" angle="0" scale_x="1" scale_y="1" />
+        </key>
+      </timeline>
+    </animation>
+    <animation id="1" name="place" length="120">
+      <mainline>
+        <key id="0" time="0">
+          <object_ref id="0" timeline="0" key="0" z_index="1" />
+        </key>
+        <key id="1" time="30">
+          <object_ref id="0" timeline="0" key="1" z_index="1" />
+        </key>
+        <key id="2" time="60">
+          <object_ref id="0" timeline="0" key="2" z_index="1" />
+        </key>
+        <key id="3" time="90">
+          <object_ref id="0" timeline="0" key="3" z_index="1" />
+        </key>
+      </mainline>
+      <timeline id="0" name="place_0">
+        <key id="0" time="0" spin="1">
+          <object folder="0" file="0" x="0" y="0" angle="0" scale_x="1" scale_y="1" />
+        </key>
+        <key id="1" time="30" spin="1">
+          <object folder="0" file="0" x="0" y="0" angle="0" scale_x="1" scale_y="1" />
+        </key>
+        <key id="2" time="60" spin="1">
+          <object folder="0" file="0" x="0" y="0" angle="0" scale_x="1" scale_y="1" />
+        </key>
+        <key id="3" time="90" spin="1">
+          <object folder="0" file="0" x="0" y="0" angle="0" scale_x="1" scale_y="1" />
+        </key>
+      </timeline>
+    </animation>
+  </entity>
+</spriter_data>

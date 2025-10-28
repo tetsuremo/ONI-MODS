@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net471</TargetFramework>
 		<AssemblyTitle>BuildableNaturalTileFix</AssemblyTitle>
-		<ProductVersion>1.0.0.0</ProductVersion>
+		<ProductVersion>1.0.0.3</ProductVersion>
 		<RootNamespace>BuildableNaturalTileFix</RootNamespace>
 		<LangVersion>10.0</LangVersion>
 		<FileAlignment>512</FileAlignment>
@@ -14,7 +14,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<!-- NuGet 包 -->
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+		<PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.44" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -75,4 +77,27 @@
 			<HintPath>..\..\..\libs\UnityEngine.UIModule.dll</HintPath>
 		</Reference>
 	</ItemGroup>
+
+	<!-- ILRepack 合并目标 -->
+	<Target Name="MergeAssemblies" AfterTargets="Build">
+		<PropertyGroup>
+			<ILRepackOutputPath>$(OutputPath)BuildableNaturalTileFix.dll</ILRepackOutputPath>
+			<LibsPath>..\..\..\libs</LibsPath>
+			<NuGetPackagesPath>$(UserProfile)\.nuget\packages</NuGetPackagesPath>
+		</PropertyGroup>
+
+		<ItemGroup>
+			<AssembliesToMerge Include="$(TargetPath)" />
+			<AssembliesToMerge Include="$(LibsPath)\PLibCore.dll" />
+			<AssembliesToMerge Include="$(LibsPath)\PLibUI.dll" />
+			<AssembliesToMerge Include="$(LibsPath)\PLibOptions.dll" />
+			<AssembliesToMerge Include="$(LibsPath)\PLibDatabase.dll" />
+		</ItemGroup>
+
+		<Message Text="开始使用 ILRepack 合并程序集..." Importance="high" />
+
+		<ILRepack OutputFile="$(ILRepackOutputPath)" InputAssemblies="@(AssembliesToMerge)" TargetKind="Dll" LibraryPath="$(LibsPath);$(NuGetPackagesPath)" />
+
+		<Message Text="ILRepack 合并完成! 输出文件: $(ILRepackOutputPath)" Importance="high" />
+	</Target>
 </Project>

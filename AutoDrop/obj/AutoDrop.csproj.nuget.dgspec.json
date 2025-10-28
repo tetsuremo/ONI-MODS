@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\AutoDrop\\AutoDrop.csproj": {}
+  },
+  "projects": {
+    "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\AutoDrop\\AutoDrop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\AutoDrop\\AutoDrop.csproj",
+        "projectName": "AutoDrop",
+        "projectPath": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\AutoDrop\\AutoDrop.csproj",
+        "packagesPath": "C:\\Users\\Orndro\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\AutoDrop\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Orndro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cdn.azure.cn/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "ILRepack.Lib.MSBuild.Task": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.43, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "PLib": {
+              "target": "Package",
+              "version": "[4.17.1, )",
+              "generatePathProperty": true
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

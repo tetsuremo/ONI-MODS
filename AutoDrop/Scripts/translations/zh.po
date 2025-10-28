@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BNTFix v1.0.0\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.7\n"
+
+msgctxt "STRINGS.UI.USERMENUACTIONS.AUTODROP_ENABLE.NAME"
+msgid "Enable AutoDrop"
+msgstr "启用自动弹出"
+
+msgctxt "STRINGS.UI.USERMENUACTIONS.AUTODROP_ENABLE.TOOLTIP"
+msgid "Enables the automatic drop behavior for this bottler."
+msgstr "启用此容器的自动弹出功能"
+
+msgctxt "STRINGS.UI.USERMENUACTIONS.AUTODROP_DISABLE.NAME"
+msgid "Disable AutoDrop"
+msgstr "停用自动弹出"
+
+msgctxt "STRINGS.UI.USERMENUACTIONS.AUTODROP_DISABLE.TOOLTIP"
+msgid "Disables the automatic drop behavior for this bottler."
+msgstr "停用此容器的自动弹出功能"

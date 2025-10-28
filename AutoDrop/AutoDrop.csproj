@@ -1,0 +1,98 @@
+﻿<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F152A40C-7A12-430A-B500-E11DF40EB09F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AutoDrop</RootNamespace>
+    <AssemblyName>AutoDrop</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- 系统 DLL -->
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\libs\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\libs\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\libs\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\libs\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\libs\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\libs\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- 源文件 -->
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\AutoDropFeature.cs" />
+    <Compile Include="Scripts\Patcher.cs" />
+    <Compile Include="Scripts\Mod.cs" />
+    <Compile Include="Scripts\STRINGS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mod.yaml" CopyToOutputDirectory="Always" />
+    <None Include="mod_info.yaml" CopyToOutputDirectory="Always" />
+    <None Include="Scripts\translations\zh.po" />
+  </ItemGroup>
+  <!-- NuGet 包 -->
+  <ItemGroup>
+    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.43" PrivateAssets="all" />
+    <PackageReference Include="PLib" Version="4.17.1" GeneratePathProperty="true" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\libs\0Harmony.dll" />
+    <Analyzer Include="..\..\..\libs\Assembly-CSharp-firstpass.dll" />
+    <Analyzer Include="..\..\..\libs\Assembly-CSharp.dll" />
+    <Analyzer Include="..\..\..\libs\Unity.TextMeshPro.dll" />
+    <Analyzer Include="..\..\..\libs\UnityEngine.CoreModule.dll" />
+    <Analyzer Include="..\..\..\libs\UnityEngine.dll" />
+    <Analyzer Include="..\..\..\libs\UnityEngine.UI.dll" />
+    <Analyzer Include="..\..\..\libs\UnityEngine.UIModule.dll" />
+  </ItemGroup>
+  <!-- ILRepack: 合并 PLib -->
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <InputAssemblies Include="$(OutputPath)LocalTimeClock.dll" />
+      <InputAssemblies Include="$(PkgPLib)\lib\net48\PLib.dll" />
+    </ItemGroup>
+    <ILRepack OutputFile="$(OutputPath)LocalTimeClock.dll" MainAssembly="$(OutputPath)LocalTimeClock.dll" InputAssemblies="@(InputAssemblies)" Internalize="true" TargetKind="Dll" LibraryPath="$(OutputPath)" />
+  </Target>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

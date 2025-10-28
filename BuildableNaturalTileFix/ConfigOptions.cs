@@ -7,7 +7,7 @@ namespace BuildableNaturalTileFix
     [ConfigFile("config.json", true, false)]
     public sealed class ConfigOptions
     {
-        public static ConfigOptions Instance { get; private set; }
+        public static ConfigOptions Instance { get; internal set; }
 
         static ConfigOptions()
         {
@@ -25,7 +25,7 @@ namespace BuildableNaturalTileFix
         [Option("BuildableNaturalTileFix.NaturalTileStrings.CONFIG.BLOCKMASS.NAME",
                 "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.BLOCKMASS.DESC",
                 "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.GENERAL")]
-        [Limit(1f, 500f)]
+        [Limit(1f, 1000f)]
         public float BlockMass { get; set; } = 10f;
 
         [JsonProperty]
@@ -34,5 +34,10 @@ namespace BuildableNaturalTileFix
                 "BuildableNaturalTileFix.NaturalTileStrings.CONFIG.GENERAL")]
         [Limit(0.1f, 50f)]
         public float BuildSpeed { get; set; } = 3f;
+
+        public static void Load()
+        {
+            Instance = PeterHan.PLib.Options.POptions.ReadSettings<ConfigOptions>() ?? new ConfigOptions();
+        }
     }
 }

@@ -1,0 +1,333 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "ILRepack.Lib.MSBuild.Task/2.0.43": {
+        "type": "package",
+        "build": {
+          "build/ILRepack.Lib.MSBuild.Task.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PLib/4.17.1": {
+        "type": "package",
+        "dependencies": {
+          "ILRepack.Lib.MSBuild.Task": "2.0.26"
+        },
+        "compile": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win": {
+      "ILRepack.Lib.MSBuild.Task/2.0.43": {
+        "type": "package",
+        "build": {
+          "build/ILRepack.Lib.MSBuild.Task.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PLib/4.17.1": {
+        "type": "package",
+        "dependencies": {
+          "ILRepack.Lib.MSBuild.Task": "2.0.26"
+        },
+        "compile": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-arm64": {
+      "ILRepack.Lib.MSBuild.Task/2.0.43": {
+        "type": "package",
+        "build": {
+          "build/ILRepack.Lib.MSBuild.Task.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PLib/4.17.1": {
+        "type": "package",
+        "dependencies": {
+          "ILRepack.Lib.MSBuild.Task": "2.0.26"
+        },
+        "compile": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x64": {
+      "ILRepack.Lib.MSBuild.Task/2.0.43": {
+        "type": "package",
+        "build": {
+          "build/ILRepack.Lib.MSBuild.Task.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PLib/4.17.1": {
+        "type": "package",
+        "dependencies": {
+          "ILRepack.Lib.MSBuild.Task": "2.0.26"
+        },
+        "compile": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x86": {
+      "ILRepack.Lib.MSBuild.Task/2.0.43": {
+        "type": "package",
+        "build": {
+          "build/ILRepack.Lib.MSBuild.Task.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PLib/4.17.1": {
+        "type": "package",
+        "dependencies": {
+          "ILRepack.Lib.MSBuild.Task": "2.0.26"
+        },
+        "compile": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/PLib.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ILRepack.Lib.MSBuild.Task/2.0.43": {
+      "sha512": "7oa+HoI7vwiPXzY6HVbMvUevr5Tn6ONoRRSHxRDW71hF8rFhLWQCCbgN9NWXUHhYJmKflv8Xgl4Jr4BFFpq1Gw==",
+      "type": "package",
+      "path": "ilrepack.lib.msbuild.task/2.0.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/ILRepack.Lib.MSBuild.Task.dll",
+        "build/ILRepack.Lib.MSBuild.Task.targets",
+        "ilrepack.lib.msbuild.task.2.0.43.nupkg.sha512",
+        "ilrepack.lib.msbuild.task.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "PLib/4.17.1": {
+      "sha512": "0Gi1kszwolS33rYvMHM6jBnjga+GrsaJgzbyTTkKj+84Oj3uqbz3QySpQsWYMG0r1zT4M39u1RCEnXqPjE7jjw==",
+      "type": "package",
+      "path": "plib/4.17.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net471/PLib.dll",
+        "lib/net471/PLib.xml",
+        "plib.4.17.1.nupkg.sha512",
+        "plib.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "ILRepack.Lib.MSBuild.Task >= 2.0.43",
+      "Newtonsoft.Json >= 13.0.3",
+      "PLib >= 4.17.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Orndro\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\AutoDrop\\AutoDrop.csproj",
+      "projectName": "AutoDrop",
+      "projectPath": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\AutoDrop\\AutoDrop.csproj",
+      "packagesPath": "C:\\Users\\Orndro\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\AutoDrop\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Orndro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.cdn.azure.cn/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "projectReferences": {}
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "dependencies": {
+          "ILRepack.Lib.MSBuild.Task": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.0.43, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
+          "PLib": {
+            "target": "Package",
+            "version": "[4.17.1, )",
+            "generatePathProperty": true
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

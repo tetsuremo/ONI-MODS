@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|WaterGate.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\watergate\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{F3E59730-A54E-47B8-90BA-8F50EC516D91}|WaterGate.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\watergate\\script\\watergatelocalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|solutionrelative:script\\watergatelocalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\watergate\\script\\watergatebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|solutionrelative:script\\watergatebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\watergate\\script\\modinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|solutionrelative:script\\modinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\watergate\\script\\configoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|solutionrelative:script\\configoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\watergate\\script\\watergatedefs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|solutionrelative:script\\watergatedefs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\watergate\\script\\strings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|solutionrelative:script\\strings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|d:\\users\\orndro\\source\\repos\\tetsuremo\\oni-mods\\watergate\\watergate.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C376AF65-E793-015B-88DC-1FA627B16398}|WaterGate.csproj|solutionrelative:watergate.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +38,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConfigOptions.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\ConfigOptions.cs",
+              "RelativeDocumentMoniker": "Script\\ConfigOptions.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\ConfigOptions.cs",
+              "RelativeToolTip": "Script\\ConfigOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T18:24:48.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WaterGateDefs.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\WaterGateDefs.cs",
+              "RelativeDocumentMoniker": "Script\\WaterGateDefs.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\WaterGateDefs.cs",
+              "RelativeToolTip": "Script\\WaterGateDefs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T09:49:58.1Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "README.md",
-              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-10-14T15:07:57.934Z",
+              "Title": "WaterGateLocalization.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\WaterGateLocalization.cs",
+              "RelativeDocumentMoniker": "Script\\WaterGateLocalization.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\WaterGateLocalization.cs",
+              "RelativeToolTip": "Script\\WaterGateLocalization.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwKIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T09:47:04.76Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModInit.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\ModInit.cs",
+              "RelativeDocumentMoniker": "Script\\ModInit.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\ModInit.cs",
+              "RelativeToolTip": "Script\\ModInit.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwDMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T09:25:14.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WaterGateBehaviour.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\WaterGateBehaviour.cs",
+              "RelativeDocumentMoniker": "Script\\WaterGateBehaviour.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\WaterGateBehaviour.cs",
+              "RelativeToolTip": "Script\\WaterGateBehaviour.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwIsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T09:25:43.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "STRINGS.cs",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\STRINGS.cs",
+              "RelativeDocumentMoniker": "Script\\STRINGS.cs",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\Script\\STRINGS.cs",
+              "RelativeToolTip": "Script\\STRINGS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T09:27:36.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WaterGate.csproj",
+              "DocumentMoniker": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\WaterGate.csproj",
+              "RelativeDocumentMoniker": "WaterGate.csproj",
+              "ToolTip": "D:\\Users\\Orndro\\source\\repos\\tetsuremo\\ONI-MODS\\WaterGate\\WaterGate.csproj",
+              "RelativeToolTip": "WaterGate.csproj",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv2EAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-25T12:35:59.713Z"
             }
           ]
         }

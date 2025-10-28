@@ -22,7 +22,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.EFFECT"
-msgid "Igneous Rock → Brine + Water\nGranite → Ethanol + Concentrated Brine\nOther Materials → Crude Oil + Petroleum"
+msgid "Igneous Rock → Salt Water + Water\nGranite → Ethanol + Brine\nOther Materials → Crude Oil + Petroleum"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X3.NAME
