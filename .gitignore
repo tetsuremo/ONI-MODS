@@ -1,0 +1,17 @@
+## Visual Studio 临时文件、生成结果等
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## 项目文件
+*.csproj.user
+*.vbproj.user
+
+## 编译结果
+*.dll
+*.exe
+*.pdb
