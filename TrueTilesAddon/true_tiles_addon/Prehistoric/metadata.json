@@ -1,0 +1,9 @@
+{
+  "Id": "Prehistoric",
+  "Name": "Prehistoric",
+  "Author": "TetsuRemo",
+  "Description": "Added material package for prehistoric planets",
+  "Order": 4,
+  "Enabled": true,
+  "Version": "1.0.0.0"
+}

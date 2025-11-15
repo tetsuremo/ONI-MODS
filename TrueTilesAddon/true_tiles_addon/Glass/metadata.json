@@ -1,0 +1,9 @@
+{
+  "Id": "Glass",
+  "Name": "Glass",
+  "Author": "TetsuRemo",
+  "Description": "Shiny and transparent★",
+  "Order": 4,
+  "Enabled": true,
+  "Version": "1.0.0.0"
+}

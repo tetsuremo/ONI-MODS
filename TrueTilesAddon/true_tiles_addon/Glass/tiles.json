@@ -1,0 +1,24 @@
+{
+  "GlassTile": {
+    "Amber": {
+      "MainTex": "glasstile_amber_main",
+      "TopTex": "glasstile_amber_top",
+      "MainSpecular": "glasstile_amber_spec"
+    },
+    "Diamond": {
+      "MainTex": "glasstile_diamond_main",
+      "TopTex": "glasstile_diamond_top",
+      "MainSpecular": "glasstile_diamond_spec"
+    },
+    "NaturalSolidResin": {
+      "MainTex": "glasstile_naturalsolidresin_main",
+      "TopTex": "glasstile_naturalsolidresin_top",
+      "MainSpecular": "glasstile_amber_spec"
+    },
+    "SolidResin": {
+      "MainTex": "glasstile_solidresin_main",
+      "TopTex": "glasstile_solidresin_top",
+      "MainSpecular": "glasstile_solidresin_spec"
+    }
+  }
+}
