@@ -3,8 +3,8 @@
 
 	<PropertyGroup>
 		<AssemblyTitle>Water Gate</AssemblyTitle>
-		<FileVersion>25.10.25</FileVersion>
-		<AssemblyVersion>25.10.25</AssemblyVersion>
+		<FileVersion>25.11.14</FileVersion>
+		<AssemblyVersion>25.11.14</AssemblyVersion>
 		<RootNamespace>WaterGateKai</RootNamespace>
 		<LangVersion>9.0</LangVersion>
 		<Description>Build a water gate</Description>
@@ -85,6 +85,10 @@
 		</Reference>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="translations\" />
+	</ItemGroup>
+
 	<!-- ILRepack 合并目标 -->
 	<Target Name="MergeAssemblies" AfterTargets="Build">
 		<PropertyGroup>
@@ -96,9 +100,9 @@
 		<ItemGroup>
 			<AssembliesToMerge Include="$(TargetPath)" />
 			<AssembliesToMerge Include="$(LibsPath)\PLibCore.dll" />
-			<AssembliesToMerge Include="$(LibsPath)\PLibUI.dll" />
-			<AssembliesToMerge Include="$(LibsPath)\PLibOptions.dll" />
 			<AssembliesToMerge Include="$(LibsPath)\PLibDatabase.dll" />
+			<AssembliesToMerge Include="$(LibsPath)\PLibOptions.dll" />
+			<AssembliesToMerge Include="$(LibsPath)\PLibUI.dll" />
 		</ItemGroup>
 
 		<Message Text="开始使用 ILRepack 合并程序集..." Importance="high" />

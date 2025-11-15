@@ -10,7 +10,7 @@
                 {
                     public static LocString NAME = "2-Tile Water Gate";
                     public static LocString DESC = "The most commonly used Liquid Locks!";
-                    public static LocString EFFECT = "Igneous Rock → Salt Water + Water\nGranite → Ethanol + Brine\nOther Materials → Crude Oil + Petroleum";
+                    public static LocString EFFECT = "Igneous Rock → Salt Water + Water\nGranite → Ethanol + Brine (modifiable via configuration)\nOther Materials → Crude Oil + Petroleum";
                 }
 
                 public class PIAPIWATERGATE1X3
@@ -38,7 +38,16 @@
         public static class CONFIG
         {
             public static LocString GENERAL = "General Settings";
-
+            public static class GRANITE_BOTTOM
+            {
+                public static LocString NAME = "Granite: Bottom Liquid";
+                public static LocString DESC = "Select the liquid generated at the bottom when Granite is used.";
+            }
+            public static class GRANITE_TOP
+            {
+                public static LocString NAME = "Granite: Top Liquid";
+                public static LocString DESC = "Select the liquid generated at the top when Granite is used.";
+            }
             public static class BUILDSPEED
             {
                 public static LocString NAME = "Build Time";
@@ -50,6 +59,7 @@
                 public static LocString NAME = "Bottom Liquid Mass (kg)";
                 public static LocString DESC = "Mass of the bottom liquid for 2-tile water gates.";
             }
+
         }
     }
 }

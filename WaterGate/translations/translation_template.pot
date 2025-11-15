@@ -22,7 +22,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X2.EFFECT"
-msgid "Igneous Rock → Salt Water + Water\nGranite → Ethanol + Brine\nOther Materials → Crude Oil + Petroleum"
+msgid "Igneous Rock → Salt Water + Water\nGranite → Ethanol + Brine (modifiable via configuration)\nOther Materials → Crude Oil + Petroleum"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.PIAPIWATERGATE1X3.NAME
@@ -97,4 +97,24 @@ msgstr ""
 #. STRINGS.CONFIG.BOTTOMLIQUIDMASS.DESC
 msgctxt "WaterGateKai.STRINGS.CONFIG.BOTTOMLIQUIDMASS.DESC"
 msgid "The mass of the generated bottom liquid (default 0.111 kg)"
+msgstr ""
+
+#. STRINGS.CONFIG.GRANITE_BOTTOM_LIQUID.NAME
+msgctxt "WaterGateKai.STRINGS.CONFIG.GRANITE_BOTTOM.NAME"
+msgid "Granite: Bottom Liquid (Default Ethanol)"
+msgstr ""
+
+#. STRINGS.CONFIG.GRANITE_BOTTOM_LIQUID.DESC
+msgctxt "WaterGateKai.STRINGS.CONFIG.GRANITE_BOTTOM.DESC"
+msgid "Select the liquid generated at the bottom when Granite is used."
+msgstr ""
+
+#. STRINGS.CONFIG.GRANITE_TOP_LIQUID.NAME
+msgctxt "WaterGateKai.STRINGS.CONFIG.GRANITE_TOP.NAME"
+msgid "Granite: Top Liquid (Default Brine)"
+msgstr ""
+
+#. STRINGS.CONFIG.BOTTOMLIQUIDMASS.DESC
+msgctxt "WaterGateKai.STRINGS.CONFIG.GRANITE_TOP.DESC"
+msgid "Select the liquid generated at the top when Granite is used."
 msgstr ""

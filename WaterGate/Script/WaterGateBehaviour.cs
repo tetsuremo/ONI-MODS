@@ -53,10 +53,9 @@ namespace WaterGateKai
                     topMass = 0.03f; // 固定质量
                     break;
                 case SimHashes.Granite:
-                    // 花岗岩：浓盐水 + 乙醇
-                    bottomElement = SimHashes.Brine;
-                    topElement = SimHashes.Ethanol;
-                    topMass = 0.03f; // 固定质量
+                    bottomElement = ConfigOptions.Instance.GetGraniteBottomSimHash();
+                    topElement = ConfigOptions.Instance.GetGraniteTopSimHash();
+                    topMass = 0.03f;
                     break;
                 default:
                     // 其他材料：原油 + 石油
