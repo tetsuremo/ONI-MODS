@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Shows tooltips on plants and critters for how much food they can supply per cycle" +
     " in their current states.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("3.10.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15a813ac0ea9ca7f9d7ffd95896574c3e659c35d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e94b796183c7bf42d71d8c9ce34178a76229fd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoodTooltipFix")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Food Supply Tooltip")]
 [assembly: System.Reflection.AssemblyVersionAttribute("3.2.0.0")]

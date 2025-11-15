@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuildableNaturalTileFix")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15a813ac0ea9ca7f9d7ffd95896574c3e659c35d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e94b796183c7bf42d71d8c9ce34178a76229fd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuildableNaturalTileFix")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuildableNaturalTileFix")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
