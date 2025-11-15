@@ -1,19 +1,38 @@
-## Visual Studio 临时文件、生成结果等
+## Visual Studio
 .vs/
-bin/
-obj/
+[Bb]in/
+[Oo]bj/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
-## 项目文件
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Files built by Visual Studio
+*.dll
+*.exe
+*.pdb
+*.cache
+
+## Project files
 *.csproj.user
 *.vbproj.user
 
-## 编译结果
-*.dll
-*.exe
-*.pdb"FoodTooltipFix/" 
-"RegistrationTool/" 
-"MaterialIDLogger/" 
+## Specific project folders to ignore
+FoodTooltipFix/
+RegistrationTool/
+MaterialIDLogger/
