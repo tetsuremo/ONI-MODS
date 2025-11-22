@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Copyright>Copyright (c) 2024 TetsuRemo</Copyright>
+		<Copyright>Copyright (c) 2025 TetsuRemo</Copyright>
 		<TargetFramework>net4.8</TargetFramework>
 		<LangVersion>9.0</LangVersion>
-		<RootNamespace>TetsuRemo.OniFontPatchZh</RootNamespace>
+		<RootNamespace>OniFontPatchZh</RootNamespace>
+		<AssemblyVersion>25.11.22</AssemblyVersion>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
@@ -21,16 +22,6 @@
 	</Target>
 
 	<ItemGroup>
-	  <Compile Remove="ModLocalizationPatch.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="scr\Loader.cs~RF5f73da.TMP" />
-	  <None Remove="scr\Patcher.cs~RF7c1254.TMP" />
-	  <None Remove="scr\PoFileReader.cs~RF135fdf8.TMP" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Reference Include="mscorlib" />
 		<Reference Include="System.Runtime" />
 		<Reference Include="System" />
@@ -40,37 +31,37 @@
 
 		<!-- Unity 游戏 DLL -->
 		<Reference Include="0Harmony">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+			<HintPath>..\..\..\libs\0Harmony.dll</HintPath>
 		</Reference>
 		<Reference Include="Assembly-CSharp">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+			<HintPath>..\..\..\libs\Assembly-CSharp.dll</HintPath>
 		</Reference>
 		<Reference Include="Assembly-CSharp-firstpass">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+			<HintPath>..\..\..\libs\Assembly-CSharp-firstpass.dll</HintPath>
 		</Reference>
 		<Reference Include="Unity.TextMeshPro">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+			<HintPath>..\..\..\libs\Unity.TextMeshPro.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.dll</HintPath>
+			<HintPath>..\..\..\libs\UnityEngine.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.AssetBundleModule">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+			<HintPath>..\..\..\libs\UnityEngine.AssetBundleModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.CoreModule">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<HintPath>..\..\..\libs\UnityEngine.CoreModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.ImageConversionModule">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
-		</Reference>
-		<Reference Include="UnityEngine.LocalizationModule">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+			<HintPath>..\..\..\libs\UnityEngine.ImageConversionModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.TextRenderingModule">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+			<HintPath>..\..\..\libs\UnityEngine.TextRenderingModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.UI">
-			<HintPath>E:\Game\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UI.dll</HintPath>
+			<HintPath>..\..\..\libs\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+		  <HintPath>..\..\..\libs\UnityEngine.UIModule.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
