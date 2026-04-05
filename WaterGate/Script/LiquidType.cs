@@ -3,9 +3,6 @@ using System;
 
 namespace WaterGateKai
 {
-    /// <summary>
-    /// 液体类型枚举 - 按照wiki页面分类准确列出
-    /// </summary>
     public enum LiquidType
     {
         // ==================== Water Based ====================

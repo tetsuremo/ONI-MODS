@@ -32,7 +32,7 @@ namespace WaterGateKai
                 new POptions().RegisterOptions(this, typeof(ConfigOptions));
                 Debug.Log("[WaterGateKai] PLib options registered.");
 
-                // 从 config.json 读取配置
+                // ✅ 从 config.json 读取配置
                 ConfigOptions.Load();
 
                 // =========================

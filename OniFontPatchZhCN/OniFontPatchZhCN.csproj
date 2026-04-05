@@ -5,11 +5,14 @@
 		<TargetFramework>net4.8</TargetFramework>
 		<LangVersion>9.0</LangVersion>
 		<RootNamespace>OniFontPatchZh</RootNamespace>
-		<AssemblyVersion>25.11.22</AssemblyVersion>
+		<AssemblyVersion>26.04.05</AssemblyVersion>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 		<Configuration>Release</Configuration>
+		<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+		<NoWarn>$(NoWarn);CS8032</NoWarn>
 	</PropertyGroup>
 
 	<Target Name="Deploy" AfterTargets="Build">
@@ -20,6 +23,10 @@
 
 		<Copy SourceFiles="@(ArtifactFile);@(ResourceFiles)" DestinationFolder="$(LocalDestinationPath)/$(MSBuildProjectName)/%(RecursiveDir)" />
 	</Target>
+
+	<ItemGroup>
+	  <None Include="Script\FinalFontPatcher.cs" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<Reference Include="mscorlib" />
@@ -51,11 +58,17 @@
 		<Reference Include="UnityEngine.CoreModule">
 			<HintPath>..\..\..\libs\UnityEngine.CoreModule.dll</HintPath>
 		</Reference>
-		<Reference Include="UnityEngine.ImageConversionModule">
-			<HintPath>..\..\..\libs\UnityEngine.ImageConversionModule.dll</HintPath>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>..\..\..\libs\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>..\..\..\libs\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.TextRenderingModule">
 			<HintPath>..\..\..\libs\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>..\..\..\libs\UnityEngine.JSONSerializeModule.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine.UI">
 			<HintPath>..\..\..\libs\UnityEngine.UI.dll</HintPath>

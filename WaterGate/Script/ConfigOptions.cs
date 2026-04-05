@@ -18,7 +18,7 @@ namespace WaterGateKai
         }
 
         // --------------------------
-        // 原来的 float 配置
+        // 配置
         // --------------------------
         [JsonProperty]
         [Option("WaterGateKai.STRINGS.CONFIG.BUILDSPEED.NAME",
@@ -35,17 +35,17 @@ namespace WaterGateKai
         public float BottomLiquidMass { get; set; } = 0.03f;
 
         // --------------------------
-        // 液体下拉菜单 - 强制序列化为字符串
+        // 液体下拉菜单
         // --------------------------
         [JsonProperty]
-        [JsonConverter(typeof(StringEnumConverter))] // 添加这个属性
+        [JsonConverter(typeof(StringEnumConverter))]
         [Option("WaterGateKai.STRINGS.CONFIG.GRANITE_BOTTOM.NAME",
                 "WaterGateKai.STRINGS.CONFIG.GRANITE_BOTTOM.DESC",
                 "WaterGateKai.STRINGS.CONFIG.GENERAL")]
         public LiquidType GraniteBottom { get; set; }
 
         [JsonProperty]
-        [JsonConverter(typeof(StringEnumConverter))] // 添加这个属性
+        [JsonConverter(typeof(StringEnumConverter))]
         [Option("WaterGateKai.STRINGS.CONFIG.GRANITE_TOP.NAME",
                 "WaterGateKai.STRINGS.CONFIG.GRANITE_TOP.DESC",
                 "WaterGateKai.STRINGS.CONFIG.GENERAL")]
@@ -53,7 +53,6 @@ namespace WaterGateKai
 
         public ConfigOptions()
         {
-            // 只有在属性没有被反序列化设置时才设置默认值
             if (GraniteBottom == default(LiquidType))
                 GraniteBottom = LiquidType.Ethanol;
 

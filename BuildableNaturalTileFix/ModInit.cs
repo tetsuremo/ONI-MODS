@@ -12,7 +12,9 @@ namespace BuildableNaturalTileFix
         {
             base.OnLoad(harmony);
 
-            // 初始化 PLib
+            // =========================
+            // 初始化 PLib（用于设置界面）
+            // =========================
             PUtil.InitLibrary();
 
             // 注册 PLib 翻译
@@ -24,8 +26,13 @@ namespace BuildableNaturalTileFix
             // ✅ 从 config.json 读取配置
             ConfigOptions.Load();
 
-            // 应用 Harmony 补丁
+            // =========================
+            // Harmony 补丁
+            // =========================
             harmony.PatchAll();
+            Debug.Log("[BNTFix] Harmony patches applied.");
+
+            Debug.Log("[BNTFix] Mod loaded successfully.");
         }
     }
 }

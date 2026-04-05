@@ -7,9 +7,7 @@ using UnityEngine;
 
 namespace WaterGateKai
 {
-    /// <summary>
-    /// 在运行时动态创建包含所有液体的枚举类型
-    /// </summary>
+
     public static class DynamicEnumCreator
     {
         private static Type dynamicLiquidType = null;
@@ -74,9 +72,6 @@ namespace WaterGateKai
             }
         }
 
-        /// <summary>
-        /// 将动态枚举值转换为 SimHashes
-        /// </summary>
         public static SimHashes ConvertToSimHash(object enumValue)
         {
             if (enumValue == null) return SimHashes.Vacuum;

@@ -5,7 +5,7 @@ using System;
 namespace TranslationLoaderLite
 {
     [RestartRequired]
-    [ConfigFile("config.json", false, true)] // 放在用户文档目录
+    [ConfigFile("config.json", false, true)] 
     [Serializable]
     public class TranslationLoaderOptions : SingletonOptions<TranslationLoaderOptions>
     {

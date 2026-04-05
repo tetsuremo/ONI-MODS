@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net471</TargetFramework>
+		<TargetFramework>net4.8</TargetFramework>
 		<AssemblyTitle>BuildableNaturalTileFix</AssemblyTitle>
-		<ProductVersion>1.0.0.3</ProductVersion>
+		<ProductVersion>1.4.5</ProductVersion>
 		<RootNamespace>BuildableNaturalTileFix</RootNamespace>
 		<LangVersion>10.0</LangVersion>
 		<FileAlignment>512</FileAlignment>
@@ -37,29 +37,8 @@
 		<Reference Include="Assembly-CSharp-firstpass">
 			<HintPath>..\..\..\libs\Assembly-CSharp-firstpass.dll</HintPath>
 		</Reference>
-		<Reference Include="PLibActions">
-			<HintPath>..\..\..\libs\PLibActions.dll</HintPath>
-		</Reference>
-		<Reference Include="PLibAVC">
-			<HintPath>..\..\..\libs\PLibAVC.dll</HintPath>
-		</Reference>
-		<Reference Include="PLibBuildings">
-			<HintPath>..\..\..\libs\PLibBuildings.dll</HintPath>
-		</Reference>
-		<Reference Include="PLibCore">
-			<HintPath>..\..\..\libs\PLibCore.dll</HintPath>
-		</Reference>
-		<Reference Include="PLibDatabase">
-			<HintPath>..\..\..\libs\PLibDatabase.dll</HintPath>
-		</Reference>
-		<Reference Include="PLibLighting">
-			<HintPath>..\..\..\libs\PLibLighting.dll</HintPath>
-		</Reference>
-		<Reference Include="PLibOptions">
-			<HintPath>..\..\..\libs\PLibOptions.dll</HintPath>
-		</Reference>
-		<Reference Include="PLibUI">
-			<HintPath>..\..\..\libs\PLibUI.dll</HintPath>
+		<Reference Include="PLib">
+		  <HintPath>..\..\..\libs\PLib.dll</HintPath>
 		</Reference>
 		<Reference Include="Unity.TextMeshPro">
 			<HintPath>..\..\..\libs\Unity.TextMeshPro.dll</HintPath>
@@ -88,10 +67,7 @@
 
 		<ItemGroup>
 			<AssembliesToMerge Include="$(TargetPath)" />
-			<AssembliesToMerge Include="$(LibsPath)\PLibCore.dll" />
-			<AssembliesToMerge Include="$(LibsPath)\PLibUI.dll" />
-			<AssembliesToMerge Include="$(LibsPath)\PLibOptions.dll" />
-			<AssembliesToMerge Include="$(LibsPath)\PLibDatabase.dll" />
+			<AssembliesToMerge Include="$(LibsPath)\PLib.dll" />
 		</ItemGroup>
 
 		<Message Text="开始使用 ILRepack 合并程序集..." Importance="high" />

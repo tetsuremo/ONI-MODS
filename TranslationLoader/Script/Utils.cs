@@ -26,29 +26,57 @@ namespace TranslationLoaderLite
         {
             try
             {
-                var locale = Localization.GetLocale();
-                string langCode = locale?.Code ?? "en";
+                // ====================================================================
+                //  【时机优化】 使用 GetCurrentLanguageCode 获取最准确的当前语言
+                // ====================================================================
+                string langCode = Localization.GetCurrentLanguageCode();
+                string poLoadCode = langCode; // 用于查找文件
+
+                if (string.IsNullOrEmpty(poLoadCode))
+                {
+                    poLoadCode = "en";
+                    Debug.LogWarning("[TranslationLoaderLite] GetCurrentLanguageCode returned empty. Falling back to 'en'.");
+                }
+
+                // ====================================================================
+                //  【语言映射】 将 zh_klei 映射为 zh，因为文件通常命名为 zh.po
+                // ====================================================================
+                if (poLoadCode.EndsWith("_klei"))
+                {
+                    poLoadCode = poLoadCode.Substring(0, poLoadCode.Length - 5); // 变为 'zh' 或 'ko' 等
+                    Debug.Log($"[TranslationLoaderLite] Mapped language code from '{langCode}' to '{poLoadCode}'");
+                }
+
                 Dictionary<string, string> dict = null;
 
-                // 1. 先尝试从外部 config 文件夹读取
-                string poPath = GetPoPath(langCode);
+                // ====================================================================
+                // 1. 先尝试从外部 config 文件夹读取 (最高优先级)
+                // ====================================================================
+                string poPath = GetPoPath(poLoadCode);
                 if (File.Exists(poPath))
                 {
                     dict = ParsePoFileFromFile(poPath);
-                    Debug.Log($"[TranslationLoaderLite] Loaded {dict.Count} translations from file: {poPath}");
+                    Debug.Log($"[TranslationLoaderLite] Loaded {dict?.Count ?? 0} translations from external file: {poPath}");
                 }
 
-                // 2. 如果文件不存在或未加载到翻译，再尝试嵌入资源
-                if (dict == null || dict.Count == 0)
+                // ====================================================================
+                // // 2. 如果文件不存在或未加载到翻译，再尝试嵌入资源
+                // ====================================================================
+                if (dict == null || (dict.Count == 0 && !File.Exists(poPath)))
                 {
-                    dict = LoadTranslationsFromEmbeddedResource(langCode);
+                    dict = LoadTranslationsFromEmbeddedResource(poLoadCode);
                 }
 
-                // 3. 如果还没有加载到翻译，就生成空模板
+                // ====================================================================
+                // 3. 如果还没有加载到翻译，就生成空模板 (使用映射后的代码)
+                // ====================================================================
                 if (dict == null || dict.Count == 0)
                 {
+                    // GenerateBlankTemplates 需要使用 GetLocale 确保生成路径正确，且我们已经知道它会返回 'zh' 或 'en'
                     GenerateBlankTemplates(force: false);
-                    poPath = GetPoPath(langCode);
+
+                    // 再次尝试从 config 文件夹读取（模板可能已创建）
+                    poPath = GetPoPath(poLoadCode);
                     if (File.Exists(poPath))
                     {
                         dict = ParsePoFileFromFile(poPath);
@@ -57,7 +85,7 @@ namespace TranslationLoaderLite
                 }
 
                 translations = dict ?? new Dictionary<string, string>();
-                Debug.Log($"[TranslationLoaderLite] Successfully loaded {translations.Count} translations for {langCode}");
+                Debug.Log($"[TranslationLoaderLite] Successfully loaded {translations.Count} translations for {poLoadCode}");
             }
             catch (Exception ex)
             {
@@ -70,8 +98,24 @@ namespace TranslationLoaderLite
             try
             {
                 var asm = Assembly.GetExecutingAssembly();
-                // 使用你确认的资源名称
-                string resourceName = "TranslationLoader.Register.zh.po";
+
+                // ====================================================================
+                //  【核心修复】 使用空字符串前缀，实现无命名空间的资源查找
+                // ====================================================================
+                string resourcePrefix = "";
+
+                string resourceName = resourcePrefix + langCode + ".po";
+                string fallbackResourceName = resourcePrefix + "en.po";
+
+                // 尝试查找当前语言资源
+                if (asm.GetManifestResourceStream(resourceName) == null && langCode != "en")
+                {
+                    // 如果找不到，尝试回退到英文
+                    resourceName = fallbackResourceName;
+                    Debug.LogWarning($"[TranslationLoaderLite] Embedded resource for {langCode} not found. Attempting fallback to {resourceName}.");
+                }
+
+                Debug.Log($"[TranslationLoaderLite] Attempting to load embedded resource: {resourceName}");
 
                 using (var stream = asm.GetManifestResourceStream(resourceName))
                 {
@@ -87,7 +131,7 @@ namespace TranslationLoaderLite
                     else
                     {
                         Debug.LogError($"[TranslationLoaderLite] Embedded resource not found: {resourceName}");
-                        // 列出所有资源用于调试
+                        // 打印所有资源，以便您最终确认 resourcePrefix 是否应该为空
                         Debug.Log("[TranslationLoaderLite] Available resources:");
                         foreach (var name in asm.GetManifestResourceNames())
                         {
@@ -98,11 +142,14 @@ namespace TranslationLoaderLite
             }
             catch (Exception ex)
             {
+                // 捕获异常，防止崩溃
                 Debug.LogError($"[TranslationLoaderLite] Failed to load embedded resource {langCode}: {ex}");
             }
 
             return null;
         }
+
+        // --- (OpenPoDirectory, GenerateBlankTemplates, PO Parsing 区域保持不变) ---
 
         public static void OpenPoDirectory()
         {
@@ -121,6 +168,7 @@ namespace TranslationLoaderLite
         {
             try
             {
+                // 使用 GetLocale，因为它在模板生成时是安全的，且可能返回 'zh'
                 var locale = Localization.GetLocale();
                 string langCode = locale?.Code ?? "en";
                 string poPath = GetPoPath(langCode);
@@ -157,7 +205,6 @@ namespace TranslationLoaderLite
         }
 
         #region PO Parsing
-
         private static Dictionary<string, string> ParsePoFileFromFile(string poFilePath)
         {
             var content = File.ReadAllText(poFilePath, Encoding.UTF8);
@@ -207,7 +254,6 @@ namespace TranslationLoaderLite
                 return line.Substring(first + 1, last - first - 1).Replace("\\n", "\n").Replace("\\t", "\t");
             return line;
         }
-
         #endregion
     }
 }

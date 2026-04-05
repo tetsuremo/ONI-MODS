@@ -1,6 +1,6 @@
 ﻿using HarmonyLib;
 using KMod;
-using System;
+using System.Reflection;
 using System.IO;
 using UnityEngine;
 
@@ -10,54 +10,25 @@ namespace OniFontPatchZhCN
     {
         public override void OnLoad(Harmony harmony)
         {
-            string rootPath = mod.file_source.GetRoot();
-            var config = FontConfig.Load(rootPath);
+            Debug.Log("[OniFontPatchZhCN] Starting MainLoader...");
 
-            // 初始化字体系统
-            FontPatcher.Fonts = CustomFontAssets.Load(rootPath, config);
-            FontPatcher.DebugMode = config.Debug;
+            // 获取 DLL 所在物理路径
+            string modPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            // 初始化翻译系统
-            if (config.EnableTranslationFix && IsChineseLanguage())
+            try
             {
-                InitializeTranslationSystem(rootPath);
+                // 1. 加载资源 (AssetBundle + JSON 配置)
+                CustomFontAssets.Load(modPath);
+
+                // 2. 挂载补丁 (执行 FinalFontPatcher)
+                base.OnLoad(harmony);
+
+                Debug.Log("[OniFontPatchZhCN] Mod loaded and patches applied successfully.");
             }
-
-            // 应用 Harmony 补丁
-            harmony.PatchAll();
-            FontPatcher.RefreshLocText();
-
-            Debug.Log("[OniFontPatchZhCN] Mod loaded successfully");
-        }
-
-        private void InitializeTranslationSystem(string rootPath)
-        {
-            string translationPath = Path.Combine(rootPath, "translations", "strings_preinstalled_zh.po");
-
-            if (File.Exists(translationPath))
+            catch (System.Exception e)
             {
-                try
-                {
-                    GameTranslationFixer.Initialize(translationPath);
-                    Debug.Log($"[OniFontPatchZhCN] Translation system initialized with {translationPath}");
-                }
-                catch (Exception ex)
-                {
-                    Debug.LogError($"[OniFontPatchZhCN] Translation system initialization failed: {ex}");
-                }
+                Debug.LogError($"[OniFontPatchZhCN] Critical Load Error: {e.Message}\n{e.StackTrace}");
             }
-            else
-            {
-                Debug.LogWarning($"[OniFontPatchZhCN] Translation file not found: {translationPath}");
-            }
-        }
-
-        private static bool IsChineseLanguage()
-        {
-            var lang = Application.systemLanguage;
-            return lang == SystemLanguage.Chinese ||
-                   lang == SystemLanguage.ChineseSimplified ||
-                   lang == SystemLanguage.ChineseTraditional;
         }
     }
 }
