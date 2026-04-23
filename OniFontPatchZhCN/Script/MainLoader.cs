@@ -3,32 +3,41 @@ using KMod;
 using System.Reflection;
 using System.IO;
 using UnityEngine;
+using System;
 
 namespace OniFontPatchZhCN
 {
     public class MainLoader : UserMod2
     {
+        public static FontConfig Config = new FontConfig(); // 全局静态配置
+
         public override void OnLoad(Harmony harmony)
         {
-            Debug.Log("[OniFontPatchZhCN] Starting MainLoader...");
-
-            // 获取 DLL 所在物理路径
+            Debug.Log("[OniFontPatchZhCN] Loading with Unity 6 Stability Patch...");
             string modPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             try
             {
-                // 1. 加载资源 (AssetBundle + JSON 配置)
+                // 加载字体
                 CustomFontAssets.Load(modPath);
 
-                // 2. 挂载补丁 (执行 FinalFontPatcher)
-                base.OnLoad(harmony);
+                harmony.PatchAll(Assembly.GetExecutingAssembly());
 
-                Debug.Log("[OniFontPatchZhCN] Mod loaded and patches applied successfully.");
+                Debug.Log("[OniFontPatchZhCN] Harmony patches (including TMPro interceptor) applied.");
+
+                base.OnLoad(harmony);
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
-                Debug.LogError($"[OniFontPatchZhCN] Critical Load Error: {e.Message}\n{e.StackTrace}");
+                Debug.LogError($"[OniFontPatchZhCN] Load Error: {e.Message}");
             }
+        }
+
+        public override void OnAllModsLoaded(Harmony harmony, System.Collections.Generic.IReadOnlyList<Mod> mods)
+        {
+            base.OnAllModsLoaded(harmony, mods);
+            if (Global.Instance != null)
+                Global.Instance.StartCoroutine(FinalFontPatcher.ApplyGlobalStylePatchCoroutine());
         }
     }
 }

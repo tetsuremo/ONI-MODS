@@ -33,6 +33,4 @@ bld/
 *.vbproj.user
 
 ## Specific project folders to ignore
-FoodTooltipFix/
-RegistrationTool/
-MaterialIDLogger/
+TModLib/
