@@ -31,6 +31,8 @@ bld/
 ## Project files
 *.csproj.user
 *.vbproj.user
+.gitignore
 
 ## Specific project folders to ignore
 TModLib/
+OniFontProbe/

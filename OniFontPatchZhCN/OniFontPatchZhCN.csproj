@@ -25,7 +25,8 @@
 	</Target>
 
 	<ItemGroup>
-	  <None Include="Script\FinalFontPatcher.cs" />
+	  <None Remove="Script\DynamicTranslationFix.cs~RF289fc3d.TMP" />
+	  <None Remove="Script\FinalFontPatcher.cs~RFc5ccd7.TMP" />
 	</ItemGroup>
 
 	<ItemGroup>
