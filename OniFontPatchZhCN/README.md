@@ -28,7 +28,7 @@
 
   - \\[Oxygen Not Included - 日本語フォントパッチ](https://github.com/enslo/oni-font-patch-jp)
 
-\## 打包教程：https://app.notion.com/p/fonts-bundle-267cd3b1b24680738ed4c72d3ca58be0?source=copy_link
+\## 打包教程：[这里](https://app.notion.com/p/fonts-bundle-267cd3b1b24680738ed4c72d3ca58be0?source=copy_link)
 
 
 \## 编译相关
