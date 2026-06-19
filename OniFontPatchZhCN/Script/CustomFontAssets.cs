@@ -41,7 +41,6 @@ namespace OniFontPatchZhCN
                     Debug.Log($" -> TitleFont 状态: {(MyTitleFont != null ? $"成功 (真实名称: {MyTitleFont.name})" : "❌ 失败为 NULL")}");
                     Debug.Log($" -> DescriptionFont 状态: {(MyDescriptionFont != null ? $"成功 (真实名称: {MyDescriptionFont.name})" : "❌ 失败为 NULL")}");
 
-                    // 🌟 自动化诊断：如果有资产加载失败，在日志里直接倾倒出 Bundle 里所有东西的真实名字，方便你直接复制
                     if (MyHeaderFont == null || MyTitleFont == null || MyDescriptionFont == null)
                     {
                         Debug.LogWarning("[OniFontPatchZhCN] 检测到部分资产未命中，正在为您倾倒 AssetBundle 内所有资产的真实名称列表...");
