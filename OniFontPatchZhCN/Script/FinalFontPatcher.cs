@@ -21,7 +21,7 @@ namespace OniFontPatchZhCN
             public FontFamily TrackedFamily;
         }
 
-        // ⚡ 轨道 B 的 GameObject 名字高效全词拦截哈希表
+        // 轨道 B 的 GameObject 名字高效全词拦截哈希表
         public static readonly HashSet<string> GraystrokeNodesFull = new HashSet<string>
         {
             "developmentbuildlabel", "supertext", "usermessagelabel", "unopeneditemcountlabel",
@@ -39,7 +39,7 @@ namespace OniFontPatchZhCN
             "quantitytext", "basename", "worldseed"
         };
 
-        // 🛠️ 唯一核心翻译清洗管线 (直接继承自你原本 100% 灵验的代码)
+        // 唯一核心翻译清洗管线
         public static string CleanDynamicText(string value)
         {
             if (string.IsNullOrEmpty(value) || !CustomFontAssets.IsZhCN) return value;
@@ -61,7 +61,7 @@ namespace OniFontPatchZhCN
             return value;
         }
 
-        // 🧠 双轨道智能字体检测引擎
+        // 双轨道智能字体检测引擎
         public static FontFamily GetFamily(TextMeshProUGUI tmp, string style)
         {
             var existingTag = tmp.GetComponent<FontTrackTag>();
@@ -209,7 +209,7 @@ namespace OniFontPatchZhCN
         }
     }
 
-    // 锚点时机 5：地毯式无损初始生命周期安全注入
+    // 锚点时机 5：地毯式无损初始生命周期安全注入（Start）
     [HarmonyPatch(typeof(LocText), "Start")]
     public static class Patch_LocText_Start
     {
@@ -220,26 +220,14 @@ namespace OniFontPatchZhCN
         }
     }
 
-    // 锚点时机 6：全屏强制收敛定时器（500ms 高效轮询，给动态无样式节点兜底）
-    [HarmonyPatch(typeof(Game), "Update")]
-    public static class Patch_Update
+    // 锚点时机 6：LocText 每次激活时自动应用（替代原 Update 轮询）
+    [HarmonyPatch(typeof(LocText), "OnEnable")]
+    public static class Patch_LocText_OnEnable
     {
-        private static float _timer;
-
         [HarmonyPostfix]
-        public static void Postfix()
+        public static void Postfix(LocText __instance)
         {
-            if (!CustomFontAssets.IsZhCN) return;
-
-            _timer += Time.unscaledDeltaTime;
-            if (_timer < 0.5f) return;
-            _timer = 0f;
-
-            var all = UnityEngine.Object.FindObjectsByType<TextMeshProUGUI>(FindObjectsSortMode.None);
-            foreach (var tmp in all)
-            {
-                OniFontPatchZhCN.Apply(tmp);
-            }
+            if (__instance != null) OniFontPatchZhCN.Apply(__instance);
         }
     }
 }
