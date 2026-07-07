@@ -64,7 +64,7 @@
 		</Reference>
 	</ItemGroup>
 
-	<!-- ILRepack 合并目标 -->
+	<!-- ILRepack 合并目标 --><!--
 	<Target Name="MergeAssemblies" AfterTargets="Build">
 		<PropertyGroup>
 			<ILRepackOutputPath>$(TargetPath)</ILRepackOutputPath>
@@ -82,6 +82,6 @@
 		<ILRepack OutputFile="$(ILRepackOutputPath)" InputAssemblies="@(AssembliesToMerge)" TargetKind="Dll" LibraryPath="$(LibsPath);$(NuGetPackagesPath)" />
 
 		<Message Text="ILRepack 合并完成! 输出文件: $(ILRepackOutputPath)" Importance="high" />
-	</Target>
+	</Target>-->
 
 </Project>
